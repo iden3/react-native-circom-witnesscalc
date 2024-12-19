@@ -16,7 +16,7 @@ buildscript {
 
 def reactNativeArchitectures() {
   def value = rootProject.getProperties().get("reactNativeArchitectures")
-  return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+  return value ? value.split(",") : ["x86_64", "arm64-v8a"]
 }
 
 def isNewArchitectureEnabled() {
@@ -49,7 +49,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.circomwitnesscalc"
+    namespace "io.iden3.rn_circom_witnesscalc"
 
     sourceSets {
       main {
@@ -58,14 +58,23 @@ android {
     }
   }
 
+  ndkVersion getExtOrDefault("ndkVersion")
   compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
 
   defaultConfig {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
-
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+    ndk {
+      abiFilters "x86_64", "arm64-v8a"
+    }
+    externalNativeBuild {
+      cmake {
+        cppFlags "-O2 -frtti -fexceptions -Wall -fstack-protector-all"
+        abiFilters "x86_64", "arm64-v8a"
+      }
+    }
   }
-
   buildTypes {
     release {
       minifyEnabled false
@@ -95,5 +104,14 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  implementation "io.iden3.circomwitnesscalc:0.0.1-alpha.1"
 }
 
+if (isNewArchitectureEnabled()) {
+  react {
+    jsRootDir = file("../src/")
+    libraryName = "CircomWitnesscalc"
+    codegenJavaPackageName = "com.circomwitnesscalc"
+  }
+}

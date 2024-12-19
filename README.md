@@ -15,8 +15,8 @@ import {calculateWitness} from 'react-native-circom-witnesscalc';
 
 // ...
 
-const inputs = readFileFromFS('path/to/inputs.json').encode('base64');
-const graph = readFileFromFS('path/to/graph.wcd').encode('base64');
+const inputs = RNFS.readFile('path/to/inputs.json', 'utf8');
+const graph = RNFS.readFile('path/to/graph.wcd', "base64");
 
 const result = await calculateWitness(inputs, graph);
 
