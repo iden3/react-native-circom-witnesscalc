@@ -24,6 +24,9 @@ const CircomWitnesscalc = CircomWitnesscalcModule
       }
     );
 
-export function calculateWitness(inputs: string, graph: string): Promise<string> {
+export function calculateWitness(
+  inputs: string,
+  graph: string
+): Promise<string> {
   return CircomWitnesscalc.calculateWitness(inputs, graph);
 }
