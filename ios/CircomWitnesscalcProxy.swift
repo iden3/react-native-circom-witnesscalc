@@ -12,8 +12,8 @@ public class CircomWitnesscalcProxy : NSObject {
     ) throws -> NSString {
         do {
             let witness = try calculateWitness(
-                inputs: inputs as Data,
-                graph: graph as Data
+                inputs: inputs as! Data,
+                graph: graph as! Data
             )
 
             return witness.base64EncodedString as NSString
