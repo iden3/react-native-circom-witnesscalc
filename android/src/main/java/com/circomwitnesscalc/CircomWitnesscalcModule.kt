@@ -1,10 +1,12 @@
 package com.circomwitnesscalc
 
+import android.util.Base64
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
-import io.iden3.circomwitnesscalc.CircomWitnesscalc
+import io.iden3.circomwitnesscalc.WitnesscalcError
+import io.iden3.circomwitnesscalc.calculateWitness
 
 class CircomWitnesscalcModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
@@ -19,22 +21,20 @@ class CircomWitnesscalcModule(reactContext: ReactApplicationContext) :
   fun calculateWitness(inputs: String, graph: String, promise: Promise) {
     try {
       // Decode base64
-      byte[] zkeyBytes = Base64.decode(graph, Base64.DEFAULT);
+      val graphBytes = Base64.decode(graph, Base64.DEFAULT);
 
-      ByteArray witness = CircomWitnesscalc.calculateWitness(
+      val witness = calculateWitness(
         inputs,
-        graph
-      );
+        graphBytes
+      )
 
       // Encode base64
-      String witnessBase64 = Base64.encodeToString(witness, Base64.DEFAULT);
+      val witnessBase64 = Base64.encodeToString(witness, Base64.DEFAULT);
 
       promise.resolve(witnessBase64);
-    } catch (RapidsnarkError e) {
-      promise.reject(String.valueOf(e.getCode()), e.getMessage());
+    } catch (e: WitnesscalcError) {
+      promise.reject(e.code.toString(), e.message);
     }
-
-    promise.resolve(a * b)
   }
 
   companion object {
