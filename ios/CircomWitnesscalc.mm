@@ -27,10 +27,10 @@ RCT_EXPORT_METHOD(calculateWitness:(nonnull NSString *)inputs
     NSData* graphData = [[NSData alloc]initWithBase64EncodedString:graph options:0];
 
     NSError* error;
-    NSDictionary *result = [
+    NSString *result = [
         CircomWitnesscalcProxy
-        calculateWitness: inputsData
-        graphData: graphData
+        calculateWitnessProxyWithInputs: inputsData
+        graph: graphData
         error: &error
     ];
 

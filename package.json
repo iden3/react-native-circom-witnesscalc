@@ -190,7 +190,7 @@
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "io.iden3.rn_circom_witnesscalc"
+      "javaPackageName": "com.circomwitnesscalc"
     }
   }
 }

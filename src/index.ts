@@ -10,7 +10,7 @@ const LINKING_ERROR =
 const isTurboModuleEnabled = global.__turboModuleProxy != null;
 
 const CircomWitnesscalcModule = isTurboModuleEnabled
-  ? require('./CircomWitnesscalc').default
+  ? require('./NativeCircomWitnesscalc').default
   : NativeModules.CircomWitnesscalc;
 
 const CircomWitnesscalc = CircomWitnesscalcModule

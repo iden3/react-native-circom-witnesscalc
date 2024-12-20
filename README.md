@@ -1,6 +1,6 @@
 # react-native-circom-witnesscalc
 
-React native wrapper for circom-witnesscalc library intended for zero knowledge proof witness calculation.
+React native wrapper for [circom-witnesscalc](https://github.com/iden3/circom-witnesscalc) library intended for zero knowledge proof witness calculation.
 
 ## Installation
 
