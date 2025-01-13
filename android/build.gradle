@@ -105,7 +105,7 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation "io.iden3:circomwitnesscalc:0.0.1-alpha.1"
+  implementation "io.iden3:circomwitnesscalc:0.0.1-alpha.2"
 }
 
 if (isNewArchitectureEnabled()) {
