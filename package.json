@@ -1,5 +1,5 @@
 {
-  "name": "react-native-circom-witnesscalc",
+  "name": "@iden3/circom-witnesscalc-react-native",
   "version": "0.0.1-alpha.1",
   "description": "React native wrapper for circom-witnesscalc library intended for zero knowledge proof witness calculation.",
   "source": "./src/index.ts",
