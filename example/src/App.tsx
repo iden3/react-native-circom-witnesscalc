@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {calculateWitness} from 'react-native-circom-witnesscalc';
+import {calculateWitness} from '@iden3/react-native-circom-witnesscalc';
 import {groth16Prove, groth16Verify} from '@iden3/react-native-rapidsnark';
 import Clipboard from '@react-native-clipboard/clipboard';
 import Share from 'react-native-share';
@@ -27,7 +27,7 @@ export default function App() {
   const [execTime, setExecTime] = React.useState(0);
 
   const runWitnesscalc = async () => {
-    console.log('Calling useGroth16FileProver');
+    console.log('Calling calculateWitness');
 
     const inputs = await getInputsFile();
     const graph = await getGraphFile();
@@ -39,7 +39,7 @@ export default function App() {
       setWitnesscalcTime(diff);
       setWitness(witnessBase64);
     } catch (e) {
-      console.error('Error creating proof', e);
+      console.error('Error calculating witness', e);
       throw e;
     }
   };
@@ -60,7 +60,7 @@ export default function App() {
   };
 
   const runExampleFlow = React.useCallback(async () => {
-    console.log('Calling calculateWitness');
+    console.log('Running example flow');
 
     // Copy assets to documents directory on Android
     if (Platform.OS === 'android') {

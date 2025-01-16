@@ -8,6 +8,14 @@ React native wrapper for [circom-witnesscalc](https://github.com/iden3/circom-wi
 npm install react-native-circom-witnesscalc
 ```
 
+### iOS
+
+Add the following line to your `Podfile`:
+
+```ruby
+use_frameworks! :linkage => :static
+```
+
 ## Usage
 
 ```js
