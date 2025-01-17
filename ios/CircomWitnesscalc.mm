@@ -1,4 +1,4 @@
-#import "CircomWitnesscalcSpec.h"
+#import <React/RCTLog.h>
 
 #if __has_include(<react_native_circom_witnesscalc/react_native_circom_witnesscalc-Swift.h>)
 #import <react_native_circom_witnesscalc/react_native_circom_witnesscalc-Swift.h>
@@ -6,10 +6,15 @@
 #import "react_native_circom_witnesscalc-Swift.h"
 #endif
 
-#import <React/RCTLog.h>
-
+#ifdef RCT_NEW_ARCH_ENABLED
+#import "CircomWitnesscalcSpec.h"
 
 @interface RCTCircomWitnesscalc : NSObject <NativeCircomWitnesscalcSpec>
+#else
+#import <React/RCTBridgeModule.h>
+
+@interface RCTCircomWitnesscalc : NSObject <RCTBridgeModule>
+#endif
 
 @end
 
@@ -23,13 +28,13 @@ RCT_EXPORT_MODULE(CircomWitnesscalc)
     return YES;
 }
 
-- (void)calculateWitness:(NSString *)inputs
-                   graph:(NSString *)graph
-                 resolve:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject
+RCT_EXPORT_METHOD(calculateWitness:(nonnull NSString *)inputs
+                  graph:(nonnull NSString *)graph
+                  resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
 {
+  NSData* inputsData = [inputs dataUsingEncoding:NSUTF8StringEncoding];
   // NSData decode base64
-  NSData* inputsData = [[NSData alloc]initWithBase64EncodedString:inputs options:0];
   NSData* graphData = [[NSData alloc]initWithBase64EncodedString:graph options:0];
 
   NSError* error;
@@ -48,9 +53,12 @@ RCT_EXPORT_MODULE(CircomWitnesscalc)
   }
 }
 
+// Don't compile this code when we build for the old architecture.
+#ifdef RCT_NEW_ARCH_ENABLED
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const facebook::react::ObjCTurboModule::InitParams &)params
 {
     return std::make_shared<facebook::react::NativeCircomWitnesscalcSpecJSI>(params);
 }
+#endif
 
 @end

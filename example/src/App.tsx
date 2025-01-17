@@ -14,9 +14,6 @@ import Clipboard from '@react-native-clipboard/clipboard';
 import Share from 'react-native-share';
 
 export default function App() {
-  const [witness, setWitness] = useState<string | undefined>(
-    'Witness is empty'
-  );
   const [witnesscalcTime, setWitnesscalcTime] = React.useState(0);
 
   const [proofResult, setProofResult] = React.useState('');
@@ -25,6 +22,8 @@ export default function App() {
     boolean | null
   >(null);
   const [execTime, setExecTime] = React.useState(0);
+
+  var witness = 'Witness is empty';
 
   const runWitnesscalc = async () => {
     console.log('Calling calculateWitness');
@@ -35,9 +34,10 @@ export default function App() {
     const startTime = performance.now();
     try {
       const witnessBase64 = await calculateWitness(inputs, graph);
+      console.log('Witness: ', witnessBase64.substring(0, 64));
       const diff = performance.now() - startTime;
       setWitnesscalcTime(diff);
-      setWitness(witnessBase64);
+      witness = witnessBase64;
     } catch (e) {
       console.error('Error calculating witness', e);
       throw e;

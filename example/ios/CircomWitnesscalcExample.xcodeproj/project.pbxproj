@@ -491,6 +491,7 @@
 				DEVELOPMENT_TEAM = 6K7H9274Q6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CircomWitnesscalcExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +519,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6K7H9274Q6;
 				INFOPLIST_FILE = CircomWitnesscalcExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
