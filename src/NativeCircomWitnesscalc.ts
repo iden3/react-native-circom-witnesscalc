@@ -4,7 +4,7 @@ import { TurboModuleRegistry } from "react-native";
 export interface Spec extends TurboModule {
   calculateWitness: (
     inputs: string,
-    witness: string,
+    graph: string,
   ) => Promise<string>;
 }
 
