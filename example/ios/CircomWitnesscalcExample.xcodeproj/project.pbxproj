@@ -13,10 +13,10 @@
 		2624F81FA04AE979DE7C2C46 /* Pods_CircomWitnesscalcExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DD94CDFA58A289C8D9BA6A /* Pods_CircomWitnesscalcExample.framework */; };
 		4752571EA77438C78E92EB10 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9157158EF3BC00A67C1858A3 /* PrivacyInfo.xcprivacy */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8D8F47442D3566CA00F6EEF2 /* verification_key.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F47422D3566CA00F6EEF2 /* verification_key.json */; };
-		8D8F47462D3566CA00F6EEF2 /* circuit.zkey in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F47412D3566CA00F6EEF2 /* circuit.zkey */; };
 		8DCFD75D2D43CA8E000AD2B6 /* inputs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75C2D43CA8E000AD2B6 /* inputs.json */; };
 		8DCFD75E2D43CA8E000AD2B6 /* graph.wcd in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */; };
+		8DCFD7612D43D3E1000AD2B6 /* verification_key.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD7602D43D3E1000AD2B6 /* verification_key.json */; };
+		8DCFD7622D43D3E1000AD2B6 /* circuit.zkey in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +41,10 @@
 		74DD94CDFA58A289C8D9BA6A /* Pods_CircomWitnesscalcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircomWitnesscalcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D3EE442717F09D9DA83D2E /* Pods-CircomWitnesscalcExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircomWitnesscalcExample.debug.xcconfig"; path = "Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CircomWitnesscalcExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8D8F47412D3566CA00F6EEF2 /* circuit.zkey */ = {isa = PBXFileReference; lastKnownFileType = file; path = circuit.zkey; sourceTree = "<group>"; };
-		8D8F47422D3566CA00F6EEF2 /* verification_key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_key.json; sourceTree = "<group>"; };
 		8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */ = {isa = PBXFileReference; lastKnownFileType = file; path = graph.wcd; sourceTree = "<group>"; };
 		8DCFD75C2D43CA8E000AD2B6 /* inputs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = inputs.json; sourceTree = "<group>"; };
+		8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */ = {isa = PBXFileReference; lastKnownFileType = file; path = circuit.zkey; sourceTree = "<group>"; };
+		8DCFD7602D43D3E1000AD2B6 /* verification_key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_key.json; sourceTree = "<group>"; };
 		9157158EF3BC00A67C1858A3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = CircomWitnesscalcExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -106,10 +106,10 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				8D8F47412D3566CA00F6EEF2 /* circuit.zkey */,
 				8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */,
+				8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */,
+				8DCFD7602D43D3E1000AD2B6 /* verification_key.json */,
 				8DCFD75C2D43CA8E000AD2B6 /* inputs.json */,
-				8D8F47422D3566CA00F6EEF2 /* verification_key.json */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -226,11 +226,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				8DCFD75D2D43CA8E000AD2B6 /* inputs.json in Resources */,
+				8DCFD7612D43D3E1000AD2B6 /* verification_key.json in Resources */,
+				8DCFD7622D43D3E1000AD2B6 /* circuit.zkey in Resources */,
 				8DCFD75E2D43CA8E000AD2B6 /* graph.wcd in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				4752571EA77438C78E92EB10 /* PrivacyInfo.xcprivacy in Resources */,
-				8D8F47442D3566CA00F6EEF2 /* verification_key.json in Resources */,
-				8D8F47462D3566CA00F6EEF2 /* circuit.zkey in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

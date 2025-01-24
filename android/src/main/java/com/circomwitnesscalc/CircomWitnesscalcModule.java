@@ -12,8 +12,8 @@ import com.facebook.react.module.annotations.ReactModule;
 
 import android.util.Base64;
 
+import io.iden3.circomwitnesscalc.WitnessCalcKt;
 import io.iden3.circomwitnesscalc.WitnesscalcError;
-import io.iden3.circomwitnesscalc.CircomWitnesscalcKt;
 
 
 @ReactModule(name = CircomWitnesscalcModule.NAME)
@@ -34,11 +34,12 @@ public class CircomWitnesscalcModule extends ReactContextBaseJavaModule {
   public void calculateWitness(String inputs, String graph, Promise promise) {
     try {
       // Decode base64
-      byte[] graphBytes = Base64.decode(wtnsBytes1, Base64.DEFAULT);
+      byte[] graphBytes = Base64.decode(graph, Base64.DEFAULT);
 
-      byte[] witness = CircomWitnesscalcKt.calculateWitness(
+      byte[] witness = WitnessCalcKt.calculateWitness(
         inputs,
         graphBytes,
+        128
       );
 
       // Encode base64

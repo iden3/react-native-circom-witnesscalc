@@ -10,9 +10,9 @@ yarn install &&
 cd ../..
 ```
 
-To setup the example app, call
+To setup the example iOS app with new arch, call
 ```bash
-yarn install && yarn pods
+yarn install && bundle install && cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
 
 Also run `yarn install` in the root folder to install dependencies for the lib as it is not packed.
