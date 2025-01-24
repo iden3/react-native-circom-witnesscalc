@@ -1,79 +1,54 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+## Example
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
+Before running the example app, you need to compile test circuit, and copy necessary files to the example app.
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+cd circuits/scripts &&
+yarn install &&
+./build.sh &&
+./copy_to_example.sh &&
+cd ../..
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+To setup the example app, call
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+yarn install && yarn pods
 ```
 
-### For iOS
+Also run `yarn install` in the root folder to install dependencies for the lib as it is not packed.
+
+#### iOS
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+#### Android
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```bash
+yarn android
+```
 
-## Step 3: Modifying your App
+### Custom circuits
 
-Now that you have successfully run the app, let's modify it.
+To use custom circuits, place your circuit, witness and zkey files in the [`ios`](./ios) for iOS and to [`android/app/src/main/assets`](./android/app/src/main/assets) for Android.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Or put these files in the [`example`](.) root folder and call [`scripts/copy_assets.sh`](./scripts/copy_assets.sh) to copy them to the correct location.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Circuits generation
 
-## Congratulations! :tada:
+You can build your own circuits and witnesses to use with example app. [`Circom`](https://docs.circom.io)
 
-You've successfully run and modified your React Native App. :partying_face:
+#### MacOS Setup
 
-### Now what?
+1. Requires [Homebrew](https://brew.sh/) and Node.
+2. Install [circom](https://github.com/iden3/circom).
+3. Install [snarkjs](https://github.com/iden3/snarkjs). In case of errors try using Node 18 with [n](https://www.npmjs.com/package/n/v/5.0.1) or other version manager.
+  1. If you want to test inputs - place `input.json` file in internal `circuits` dir.
+4. Run [`./circuits/scripts/build.sh`](./circuits/scripts/build.sh) to generate the circuit and witness files, prove and verify circuit with given `input.json`.
+5. Run [`./circuits/scripts/copy_to_example.sh`](./circuits/scripts/copy_to_example.sh) to update example app with new circuit and witness files.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+`circuits` folder is taken from [iden3/circuits](https://github.com/iden3/circuits/blob/master/test/circuits/authV2Test.circom) repo.
 
-# Troubleshooting
+`circuits/input.json` is taken from [iden3/circuits](https://github.com/iden3/circuits/blob/master/test/auth/authV2.test.ts) test, line 10.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

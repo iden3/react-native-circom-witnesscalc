@@ -1,8 +1,8 @@
-import { NativeModules, Platform } from 'react-native';
+import {NativeModules, Platform} from 'react-native';
 
 const LINKING_ERROR =
   `The package 'react-native-circom-witnesscalc' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+  Platform.select({ios: "- You have run 'pod install'\n", default: ''}) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
@@ -16,17 +16,21 @@ const CircomWitnesscalcModule = isTurboModuleEnabled
 const CircomWitnesscalc = CircomWitnesscalcModule
   ? CircomWitnesscalcModule
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
 
-export function calculateWitness(
+
+export async function calculateWitness(
   inputs: string,
-  graph: string
+  graph: string,
 ): Promise<string> {
-  return CircomWitnesscalc.calculateWitness(inputs, graph);
+  return CircomWitnesscalc.calculateWitness(
+    inputs,
+    graph,
+  );
 }

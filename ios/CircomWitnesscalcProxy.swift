@@ -15,7 +15,7 @@ public class CircomWitnesscalcProxy : NSObject {
         inputs: inputs as Data,
         graph: graph as Data
       )
-      
+
       return witness.base64EncodedString() as NSString
     } catch let error {
       throw error
