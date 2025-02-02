@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import RNFS from 'react-native-fs';
 import {
   Platform,
@@ -11,7 +11,7 @@ import {
 import {calculateWitness} from '@iden3/react-native-circom-witnesscalc';
 import {groth16Prove, groth16Verify} from '@iden3/react-native-rapidsnark';
 import Clipboard from '@react-native-clipboard/clipboard';
-import Share from 'react-native-share';
+// import Share from 'react-native-share';
 
 export default function App() {
   const [witnesscalcTime, setWitnesscalcTime] = React.useState(0);
@@ -129,10 +129,10 @@ export default function App() {
     };
 
     try {
-      const shareResponse = await Share.open(shareOptions);
-      console.log('Shared =>', shareResponse);
+      // const shareResponse = await Share.open(shareOptions);
+      // console.log('Shared =>', shareResponse);
     } catch (error) {
-      console.log('Error =>', error);
+      // console.log('Error =>', error);
     }
   };
 
@@ -244,9 +244,9 @@ function getVerificationKeyFile(): Promise<string> {
 }
 
 const logProof = ({
-  proof,
-  pub_signals,
-}: {
+                    proof,
+                    pub_signals,
+                  }: {
   proof: string;
   pub_signals: string;
 }) => {

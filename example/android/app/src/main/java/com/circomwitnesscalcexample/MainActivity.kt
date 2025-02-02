@@ -1,4 +1,4 @@
-package circomwitnesscalc.example
+package com.circomwitnesscalcexample
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

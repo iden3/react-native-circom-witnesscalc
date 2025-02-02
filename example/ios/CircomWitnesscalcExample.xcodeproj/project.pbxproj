@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* CircomWitnesscalcExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CircomWitnesscalcExampleTests.m */; };
-		07316902DD5722F3A813574F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DE2A572BA6C92F6FE29AE7D2 /* PrivacyInfo.xcprivacy */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2624F81FA04AE979DE7C2C46 /* Pods_CircomWitnesscalcExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DD94CDFA58A289C8D9BA6A /* Pods_CircomWitnesscalcExample.framework */; };
+		4752571EA77438C78E92EB10 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9157158EF3BC00A67C1858A3 /* PrivacyInfo.xcprivacy */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8D8F474B2D369CE600F6EEF2 /* verification_key.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F474A2D369CE600F6EEF2 /* verification_key.json */; };
-		8D8F474C2D369CE600F6EEF2 /* circuit.zkey in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F47472D369CE600F6EEF2 /* circuit.zkey */; };
-		8D8F474D2D369CE600F6EEF2 /* graph.wcd in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F47482D369CE600F6EEF2 /* graph.wcd */; };
-		8D8F474E2D369CE600F6EEF2 /* inputs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F47492D369CE600F6EEF2 /* inputs.json */; };
-		8DA63EED2D41210200763921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA63EEC2D41210200763921 /* AppDelegate.swift */; };
-		BACF89B8CEE6FC25F46A02D6 /* Pods_CircomWitnesscalcExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76684899725335D5FAD289BA /* Pods_CircomWitnesscalcExample.framework */; };
+		8DCFD75D2D43CA8E000AD2B6 /* inputs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75C2D43CA8E000AD2B6 /* inputs.json */; };
+		8DCFD75E2D43CA8E000AD2B6 /* graph.wcd in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */; };
+		8DCFD7612D43D3E1000AD2B6 /* verification_key.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD7602D43D3E1000AD2B6 /* verification_key.json */; };
+		8DCFD7622D43D3E1000AD2B6 /* circuit.zkey in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,23 +31,21 @@
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* CircomWitnesscalcExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircomWitnesscalcExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* CircomWitnesscalcExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircomWitnesscalcExampleTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CircomWitnesscalcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircomWitnesscalcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CircomWitnesscalcExample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = CircomWitnesscalcExample/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CircomWitnesscalcExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CircomWitnesscalcExample/Info.plist; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = CircomWitnesscalcExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-CircomWitnesscalcExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircomWitnesscalcExample.debug.xcconfig"; path = "Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-CircomWitnesscalcExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircomWitnesscalcExample.release.xcconfig"; path = "Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample.release.xcconfig"; sourceTree = "<group>"; };
-		76684899725335D5FAD289BA /* Pods_CircomWitnesscalcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircomWitnesscalcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CircomWitnesscalcExample/main.m; sourceTree = "<group>"; };
+		634CFC5702CE96AD611A1161 /* Pods-CircomWitnesscalcExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircomWitnesscalcExample.release.xcconfig"; path = "Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample.release.xcconfig"; sourceTree = "<group>"; };
+		74DD94CDFA58A289C8D9BA6A /* Pods_CircomWitnesscalcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircomWitnesscalcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D3EE442717F09D9DA83D2E /* Pods-CircomWitnesscalcExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircomWitnesscalcExample.debug.xcconfig"; path = "Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CircomWitnesscalcExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8D8F47472D369CE600F6EEF2 /* circuit.zkey */ = {isa = PBXFileReference; lastKnownFileType = file; path = circuit.zkey; sourceTree = "<group>"; };
-		8D8F47482D369CE600F6EEF2 /* graph.wcd */ = {isa = PBXFileReference; lastKnownFileType = file; path = graph.wcd; sourceTree = "<group>"; };
-		8D8F47492D369CE600F6EEF2 /* inputs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = inputs.json; sourceTree = "<group>"; };
-		8D8F474A2D369CE600F6EEF2 /* verification_key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_key.json; sourceTree = "<group>"; };
-		8DA63EEC2D41210200763921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DA63EEE2D41210700763921 /* CircomWitnesscalcExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircomWitnesscalcExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		DE2A572BA6C92F6FE29AE7D2 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = CircomWitnesscalcExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */ = {isa = PBXFileReference; lastKnownFileType = file; path = graph.wcd; sourceTree = "<group>"; };
+		8DCFD75C2D43CA8E000AD2B6 /* inputs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = inputs.json; sourceTree = "<group>"; };
+		8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */ = {isa = PBXFileReference; lastKnownFileType = file; path = circuit.zkey; sourceTree = "<group>"; };
+		8DCFD7602D43D3E1000AD2B6 /* verification_key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verification_key.json; sourceTree = "<group>"; };
+		9157158EF3BC00A67C1858A3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = CircomWitnesscalcExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -63,40 +61,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACF89B8CEE6FC25F46A02D6 /* Pods_CircomWitnesscalcExample.framework in Frameworks */,
+				2624F81FA04AE979DE7C2C46 /* Pods_CircomWitnesscalcExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* CircomWitnesscalcExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* CircomWitnesscalcExampleTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = CircomWitnesscalcExampleTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* CircomWitnesscalcExample */ = {
 			isa = PBXGroup;
 			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				8DA63EEC2D41210200763921 /* AppDelegate.swift */,
-				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
-				DE2A572BA6C92F6FE29AE7D2 /* PrivacyInfo.xcprivacy */,
-				8DA63EEE2D41210700763921 /* CircomWitnesscalcExample-Bridging-Header.h */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				9157158EF3BC00A67C1858A3 /* PrivacyInfo.xcprivacy */,
 			);
 			name = CircomWitnesscalcExample;
 			sourceTree = "<group>";
@@ -105,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				76684899725335D5FAD289BA /* Pods_CircomWitnesscalcExample.framework */,
+				74DD94CDFA58A289C8D9BA6A /* Pods_CircomWitnesscalcExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,14 +103,13 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* CircomWitnesscalcExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* CircomWitnesscalcExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				8D8F47472D369CE600F6EEF2 /* circuit.zkey */,
-				8D8F47482D369CE600F6EEF2 /* graph.wcd */,
-				8D8F47492D369CE600F6EEF2 /* inputs.json */,
-				8D8F474A2D369CE600F6EEF2 /* verification_key.json */,
+				8DCFD75B2D43CA8E000AD2B6 /* graph.wcd */,
+				8DCFD75F2D43D3E1000AD2B6 /* circuit.zkey */,
+				8DCFD7602D43D3E1000AD2B6 /* verification_key.json */,
+				8DCFD75C2D43CA8E000AD2B6 /* inputs.json */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,8 +128,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-CircomWitnesscalcExample.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-CircomWitnesscalcExample.release.xcconfig */,
+				79D3EE442717F09D9DA83D2E /* Pods-CircomWitnesscalcExample.debug.xcconfig */,
+				634CFC5702CE96AD611A1161 /* Pods-CircomWitnesscalcExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -179,13 +159,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CircomWitnesscalcExample" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				B492BA12779AB54A88C70AC9 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				EE43E95EA98F90B5A180CA36 /* [CP] Copy Pods Resources */,
+				2AAD9DDD4938D7EF01417439 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,7 +189,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1620;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -245,12 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				8D8F474B2D369CE600F6EEF2 /* verification_key.json in Resources */,
-				8D8F474C2D369CE600F6EEF2 /* circuit.zkey in Resources */,
-				8D8F474D2D369CE600F6EEF2 /* graph.wcd in Resources */,
-				8D8F474E2D369CE600F6EEF2 /* inputs.json in Resources */,
+				8DCFD75D2D43CA8E000AD2B6 /* inputs.json in Resources */,
+				8DCFD7612D43D3E1000AD2B6 /* verification_key.json in Resources */,
+				8DCFD7622D43D3E1000AD2B6 /* circuit.zkey in Resources */,
+				8DCFD75E2D43CA8E000AD2B6 /* graph.wcd in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				07316902DD5722F3A813574F /* PrivacyInfo.xcprivacy in Resources */,
+				4752571EA77438C78E92EB10 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +251,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		2AAD9DDD4938D7EF01417439 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,7 +270,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CircomWitnesscalcExample/Pods-CircomWitnesscalcExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		B492BA12779AB54A88C70AC9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,7 +292,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		EE43E95EA98F90B5A180CA36 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* CircomWitnesscalcExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA63EED2D41210200763921 /* AppDelegate.swift in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +359,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = circomwitnesscalc.example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircomWitnesscalcExample.app/CircomWitnesscalcExample";
 			};
@@ -402,7 +382,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = circomwitnesscalc.example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircomWitnesscalcExample.app/CircomWitnesscalcExample";
 			};
@@ -410,7 +390,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-CircomWitnesscalcExample.debug.xcconfig */;
+			baseConfigurationReference = 79D3EE442717F09D9DA83D2E /* Pods-CircomWitnesscalcExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -418,18 +398,18 @@
 				DEVELOPMENT_TEAM = 6K7H9274Q6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CircomWitnesscalcExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = circomwitnesscalc.example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CircomWitnesscalcExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "CircomWitnesscalcExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -440,25 +420,25 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-CircomWitnesscalcExample.release.xcconfig */;
+			baseConfigurationReference = 634CFC5702CE96AD611A1161 /* Pods-CircomWitnesscalcExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6K7H9274Q6;
 				INFOPLIST_FILE = CircomWitnesscalcExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = circomwitnesscalc.example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CircomWitnesscalcExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "CircomWitnesscalcExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -499,7 +479,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -538,15 +518,22 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRN_FABRIC_ENABLED",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
-					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRN_FABRIC_ENABLED",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -587,7 +574,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -618,15 +605,22 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRN_FABRIC_ENABLED",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
-					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRN_FABRIC_ENABLED",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

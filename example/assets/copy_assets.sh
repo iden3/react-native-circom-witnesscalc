@@ -1,22 +1,12 @@
 echo "Copying zkey, verification key and witness files to assets folder"
 
 DIST=$(pwd)
-ZKEY=$DIST/circuit.zkey
-VERIFICATION_KEY=$DIST/verification_key.json
 INPUTS=$DIST/inputs.json
 GRAPH=$DIST/graph.wcd
+ZKEY=$DIST/circuit.zkey
+VERIFICATION_KEY=$DIST/verification_key.json
 
 mkdir -p ../android/app/src/main/assets
-
-echo "--------------------"
-
-if [[ -f $INPUTS ]]; then
-  cp $INPUTS ../ios
-  cp $INPUTS ../android/app/src/main/assets
-  echo "inputs copied"
-else
-  echo "inputs not found"
-fi
 
 echo "--------------------"
 
@@ -40,10 +30,20 @@ fi
 
 echo "--------------------"
 
+if [[ -f $INPUTS ]]; then
+  cp $INPUTS ../ios
+  cp $INPUTS ../android/app/src/main/assets
+  echo "witness copied"
+else
+  echo "witness not found"
+fi
+
+echo "--------------------"
+
 if [[ -f $GRAPH ]]; then
   cp $GRAPH ../ios
   cp $GRAPH ../android/app/src/main/assets
-  echo "graph copied"
+  echo "witness copied"
 else
-  echo "graph not found"
+  echo "witness not found"
 fi

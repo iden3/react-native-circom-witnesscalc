@@ -13,10 +13,13 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "11.0" }
-  s.source       = { :git => "https://github.com/iden3/react-native-circom-witnesscalc.git.git", :tag => "#{s.version}" }
+  s.source       = { :git => package["repository"], :tag => "#{s.version}" }
 
   s.static_framework = true
   s.source_files = "ios/**/*.{h,m,mm,swift}"
+
+  s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+  s.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
 
   s.dependency "CircomWitnesscalc", "0.0.1-alpha.3"
 

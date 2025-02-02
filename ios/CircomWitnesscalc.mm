@@ -1,31 +1,18 @@
-#import <React/RCTLog.h>
+#import "CircomWitnesscalc.h"
 
+#import <React/RCTLog.h>
 #if __has_include(<react_native_circom_witnesscalc/react_native_circom_witnesscalc-Swift.h>)
 #import <react_native_circom_witnesscalc/react_native_circom_witnesscalc-Swift.h>
 #else
 #import "react_native_circom_witnesscalc-Swift.h"
 #endif
 
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "CircomWitnesscalcSpec.h"
-
-@interface RCTCircomWitnesscalc : NSObject <NativeCircomWitnesscalcSpec>
-#else
-#import <React/RCTBridgeModule.h>
-
-@interface RCTCircomWitnesscalc : NSObject <RCTBridgeModule>
-#endif
-
-@end
-
-
-@implementation RCTCircomWitnesscalc
-
+@implementation CircomWitnesscalc
 RCT_EXPORT_MODULE(CircomWitnesscalc)
 
 + (BOOL)requiresMainQueueSetup
 {
-    return YES;
+    return NO;
 }
 
 RCT_EXPORT_METHOD(calculateWitness:(nonnull NSString *)inputs
@@ -55,7 +42,8 @@ RCT_EXPORT_METHOD(calculateWitness:(nonnull NSString *)inputs
 
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
-- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const facebook::react::ObjCTurboModule::InitParams &)params
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+(const facebook::react::ObjCTurboModule::InitParams &)params
 {
     return std::make_shared<facebook::react::NativeCircomWitnesscalcSpecJSI>(params);
 }
