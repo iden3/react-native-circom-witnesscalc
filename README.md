@@ -19,7 +19,7 @@ use_frameworks! :linkage => :static
 ## Usage
 
 ```js
-import {calculateWitness} from 'react-native-circom-witnesscalc';
+import {calculateWitness} from '@iden3/react-native-circom-witnesscalc';
 
 // ...
 
