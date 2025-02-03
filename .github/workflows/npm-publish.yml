@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: 20.10
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
-      - run: yarn npm publish
+      - run: yarn install --immutable
+      - run: |
+          echo "//registry.npmjs.org/:_authToken=${{secrets.IDENTITY_NPM_PUBLISH_TOKEN}}" > .npmrc
+          yarn npm publish
         env:
           NPM_TOKEN: ${{secrets.IDENTITY_NPM_PUBLISH_TOKEN}}
