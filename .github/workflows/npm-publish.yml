@@ -17,6 +17,6 @@ jobs:
       - run: yarn install --immutable
       - run: |
           echo "//registry.npmjs.org/:_authToken=${{secrets.IDENTITY_NPM_PUBLISH_TOKEN}}" > .npmrc
-          yarn npm publish
+          yarn npm publish --access public
         env:
           NPM_TOKEN: ${{secrets.IDENTITY_NPM_PUBLISH_TOKEN}}
