@@ -1,6 +1,6 @@
 {
   "name": "@iden3/react-native-circom-witnesscalc",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1-beta.1",
   "description": "React-native wrapper for circom-witnesscalc",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -143,5 +143,6 @@
     "android": {
       "javaPackageName": "com.circomwitnesscalc"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
