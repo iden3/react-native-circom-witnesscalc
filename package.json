@@ -50,7 +50,7 @@
   "repository": "https://github.com/iden3/react-native-circom-witnesscalc",
   "homepage": "https://github.com/iden3/react-native-circom-witnesscalc",
   "author": "demonsh <dmytro.sukhiy@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT, Apache",
   "bugs": {
     "url": "https://github.com/iden3/react-native-circom-witnesscalc/issues"
   },

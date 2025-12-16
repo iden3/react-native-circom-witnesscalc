@@ -5,7 +5,7 @@ React native wrapper for [circom-witnesscalc](https://github.com/iden3/circom-wi
 ## Installation
 
 ```sh
-npm install react-native-circom-witnesscalc
+npm i @iden3/react-native-circom-witnesscalc
 ```
 
 ### iOS
@@ -19,7 +19,7 @@ use_frameworks! :linkage => :static
 ## Usage
 
 ```js
-import {calculateWitness} from 'react-native-circom-witnesscalc';
+import {calculateWitness} from '@iden3/react-native-circom-witnesscalc';
 
 // ...
 
